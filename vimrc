@@ -64,7 +64,12 @@ call plug#end()
 syntax on
 "hi CursorLine           cterm=none ctermbg=238      ctermfg=none    gui=none        guibg=#424242
 "hi CursorColumn         cterm=none ctermbg=238      ctermfg=none    gui=none        guibg=#424242
-colorscheme smyck
+
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""
 " Keymapping
