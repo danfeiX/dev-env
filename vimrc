@@ -37,26 +37,13 @@ let g:cpp_class_scope_highlight = 1
 
 let g:cpp_member_variable_highlight = 1
 
-
 let g:pymode_rope = 0
 
-call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/klen/python-mode.git'
+filetype off
+execute pathogen#infect()
 
-Plug 'https://github.com/rhysd/vim-clang-format.git'
-
-" Quick file browser
-Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'octol/vim-cpp-enhanced-highlight'
-
-" Git integration
-Plug 'tpope/vim-fugitive'
-
-" Tab file browser
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
-
-call plug#end()
+call pathogen#infect()
+call pathogen#helptags()
 
 " Colorscheme
 " color evening

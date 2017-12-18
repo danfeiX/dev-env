@@ -1,8 +1,13 @@
+# use the default vimrc
 cp vimrc ~/.vimrc
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+# use color themes
 cp -r colors ~/.vim/
 
-echo 'run :PlugInstall in vim'
+# install pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# install python-mode
+cd ~/.vim
+mkdir -p bundle && cd bundle
+git clone --recursive https://github.com/python-mode/python-mode
